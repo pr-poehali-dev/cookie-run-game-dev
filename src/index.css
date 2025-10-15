@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@400;500;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +99,34 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Rounded Mplus 1c", sans-serif;
+  }
+}
+
+.cookie-gradient {
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffb84d 100%);
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #A85F7 0%, #34d399 100%);
+}
+
+.game-shadow {
+  box-shadow:
+    0 8px 0 rgba(0, 0, 0, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
