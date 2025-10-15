@@ -3,9 +3,10 @@ import Icon from '@/components/ui/icon';
 
 interface HomePageProps {
   onEnterGame: () => void;
+  onMemoryGame: () => void;
 }
 
-export default function HomePage({ onEnterGame }: HomePageProps) {
+export default function HomePage({ onEnterGame, onMemoryGame }: HomePageProps) {
   return (
     <div className="min-h-screen cookie-gradient flex items-center justify-center p-4 overflow-hidden relative">
       {/* Декоративные элементы */}
@@ -50,6 +51,14 @@ export default function HomePage({ onEnterGame }: HomePageProps) {
 
         {/* Дополнительные кнопки */}
         <div className="mt-8 flex gap-4 justify-center flex-wrap">
+          <Button 
+            onClick={onMemoryGame}
+            variant="outline"
+            className="game-shadow font-bold py-4 px-8 rounded-full bg-white/90 hover:bg-white border-4 border-[#FFB84D] text-[#FFB84D] text-xl transition-all hover:scale-105"
+          >
+            <Icon name="Puzzle" className="mr-2" size={24} />
+            НАЙДИ ПАРУ
+          </Button>
           <Button 
             variant="outline"
             className="game-shadow font-bold py-4 px-8 rounded-full bg-white/90 hover:bg-white border-4 border-[#FFB84D] text-[#FFB84D] text-xl transition-all hover:scale-105"
